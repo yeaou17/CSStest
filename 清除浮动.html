@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style type="text/css">
+     /*清除浮动
+            让浮动的子元素库撑开父级的高度
+            1.直接设置父级元素的高度
+            2.开启BFC
+                overflow: hidden (宽度全屏) position: absolute(宽度子级) float: left(宽度子级)
+            3.br标签
+                <br clear="all"/>(宽度子级)
+            4.空标签
+                <div style="clear: both"></div>(宽度子级)
+            5.为元素
+              <div id="wrap" class="clearfix">
+                .clearfix{
+                    *zoom:1;
+                }
+                .clearfix:after{
+                    content:"";
+                    display: block;
+                    clear:both;
+                }
+     */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            border: 1px solid;
+            /*overflow: hidden;*/
+            /*position: absolute;*/
+
+            /*float: left;*/
+        }
+        #inner{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .clearfix{
+            *zoom:1;
+        }
+        .clearfix:after{
+            content:"";
+            display: block;
+            clear:both;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap" class="clearfix">
+        <div id="inner">
+
+        </div>
+<!--        <br clear="all"/>-->
+<!--        <div style="clear: both"></div>-->
+    </div>
+</body>
+</html>
