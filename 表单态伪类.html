@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单态伪类</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        label{
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+           overflow: hidden;  /*缺少此句会导致方块盖在圆上*/
+            border-radius: 50%;
+        }
+        label > span{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+        input{
+            position: absolute;
+            left: -50px;
+            top: -50px;
+        }
+        input:checked + span{
+            background: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <label>
+        <input type="radio" name="au">
+        <span></span>
+    </label>
+    <label>
+        <input type="radio" name="au">
+        <span></span>
+    </label>
+    <label>
+        <input type="radio" name="au">
+        <span></span>
+    </label>
+
+</body>
+</html>

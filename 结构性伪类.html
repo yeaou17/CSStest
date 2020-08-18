@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nth-child</title>
+    <style type="text/css">
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        /*#wrap li:nth-child(1)
+            找到#wrap下所有的子元素，并且选中第一个子元素，并且这个子元素必须是li（看元素）*/
+        /*#wrap li:nth-child(1){*/
+        /*    color: pink;*/
+        /*}*/
+         /*#wrap li:nth-of-type(1)
+            与first-child效果一致
+            找到#wrap下所有的子元素，并且选中第一个li（看代码）元素*/
+        /* #wrap li:nth-of-type(1){
+             color: pink;
+         }
+        :first-child{
+            border: 1px solid;
+        }这里表示所有第一子元素都加上了边框，html、ul、li*/
+
+
+        /*only-child
+            当p为唯一子元素时生效
+        */
+         p:only-child{
+             color: blue;
+         }
+    </style>
+</head>
+<body>
+<ul id="wrap">
+    <p>p</p>
+<!--    <li>1</li>-->
+<!--    <li>2</li>-->
+<!--    <li>3</li>-->
+<!--    <li>4</li>-->
+<!--    <li>5</li>-->
+</ul>
+</body>
+</html>
